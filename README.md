@@ -22,6 +22,10 @@
 - QEMU (>= 5.0)
 - GNU Make
 
+```bash
+sudo pacman -S gnu-efi make nasm gcc qemu-full edk2-ovmf dosfstools
+```
+
 ### build
 ```bash
 make clean && make
