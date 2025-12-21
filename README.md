@@ -4,7 +4,7 @@
 
 ## --------- Check List ---------
 
-### Working bootloader - 🟧 (Infinite kernel startup)
+### Working bootloader - 🟥 (No image)
 
 ### Working kernel - 🟥
 
@@ -12,7 +12,7 @@
 
 ### Your own extension for launching applications (analog .exe, .appimage) - 🟥
 
-### Attempts to boot on real hardware - 🟥 (UEFI = "Not booting for uefi", Legacy - "Zrub is loading, then "loading Zinux kernel" hard reset. [Video](https://t.me/Zinux_channel/49)")
+### Attempts to boot on real hardware - 🟥 (There were no attempts)
 
 ## --------- Build & Run ---------
 
@@ -22,33 +22,29 @@
 - QEMU (>= 5.0)
 - GNU Make
 
-### Build
-
+### build
 ```bash
-make
+make clean && make
+chmod +x create_disk.sh
+sudo ./create_disk.sh
 ```
 
-This will generate a bootable floppy image (zinux.img) in the build/ directory.
+### Start in QEMU
+Method 1:
+```bash
+make run
+```
 
-### Run in QEMU
+Method 2:
+```bash
+qemu-system-x86_64 -bios /usr/share/edk2-ovmf/x64/OVMF.4m.fd -drive file=disk.img,format=raw,if=ide -m 256M -serial stdio
+```
 
-```
- qemu-system-x86_64 -fda build/zinux.img
-```
-### Run in Real PC
-
-```
- sudo dd if=build/zinux.img  of=/dev/sdX bs=1M
-```
 ### Clean
-
-To remove all build artifacts (boot.bin, zinux.img) run:
-
-```
+To remove all build artifacts run:
+```bash
 make clean
 ```
-
-This will delete the entire build/ directory
 
 ---
 
