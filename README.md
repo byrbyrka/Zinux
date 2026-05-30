@@ -37,7 +37,7 @@ make clean && make
 ```
 ```bash
 #Build programs
-cd development\ folder/
+cd developmentfolder/
 make
 ```
 ---
@@ -45,7 +45,7 @@ make
 ### Install programs
 **Method 1:**
 ```bash
-cd development\ folder/
+cd developmentfolder/
 make install
 ```
 **Method 2**

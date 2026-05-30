@@ -37,7 +37,7 @@ make clean && make
 ```
 ```bash
 # Сборка программ
-cd development\ folder/
+cd developmentfolder/
 make
 ```
 ---
@@ -45,7 +45,7 @@ make
 ### Установка программного обеспечения
 **Способ 1:**
 ```bash
-cd development\ folder/
+cd developmentfolder/
 make install
 ```
 **Способ 2:**
