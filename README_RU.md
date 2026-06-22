@@ -24,7 +24,9 @@
 - GNU Make
 
 ```bash
-sudo pacman -S nasm i686-elf-gcc gcc make ld qemu mtools dosfstools dd
+sudo pacman -S nasm make binutils qemu-system-x86 mtools dosfstools
+
+paru -S i686-elf-gcc
 ```
 ---
 
@@ -35,7 +37,7 @@ make clean && make
 ```
 ```bash
 # Сборка программ
-cd development\ folder/
+cd developmentfolder/
 make
 ```
 ---
@@ -43,7 +45,7 @@ make
 ### Установка программного обеспечения
 **Способ 1:**
 ```bash
-cd development\ folder/
+cd developmentfolder/
 make install
 ```
 **Способ 2:**

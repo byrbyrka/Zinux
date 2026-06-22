@@ -24,7 +24,9 @@
 - GNU Make
 
 ```bash
-sudo pacman -S nasm, i686-elf-gcc, gcc, make, ld, qemu, mtools, dosfstools, dd
+sudo pacman -S nasm make binutils qemu-system-x86 mtools dosfstools
+
+paru -S i686-elf-gcc || yay -S i686-elf-gcc 
 ```
 ---
 
@@ -35,7 +37,7 @@ make clean && make
 ```
 ```bash
 #Build programs
-cd development\ folder/
+cd developmentfolder/
 make
 ```
 ---
@@ -43,7 +45,7 @@ make
 ### Install programs
 **Method 1:**
 ```bash
-cd development\ folder/
+cd developmentfolder/
 make install
 ```
 **Method 2**
