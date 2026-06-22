@@ -26,7 +26,7 @@
 ```bash
 sudo pacman -S nasm make binutils qemu-system-x86 mtools dosfstools
 
-paru -S i686-elf-gcc
+paru -S i686-elf-gcc || yay -S i686-elf-gcc 
 ```
 ---
 
